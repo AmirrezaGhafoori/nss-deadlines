@@ -8,7 +8,7 @@
   comment: Abstract due a week before the full paper deadline. Page limit is 9 pages for main text, with 10 total pages including references and appendices.
   date: TBD
   place: TBD
-  tags: [NETWORKING, CONF]
+  tags: [NETWORKING,WIRELESS, SYSTEMS, SECURITY, CONF]
 - name: ICC
   description: IEEE International Conference on Communications
   year: 2026
@@ -18,7 +18,7 @@
   comment: The page limit is 6 pages.
   date: TBD
   place: TBD
-  tags: [WIRELESS, CONF]
+  tags: [NETWORKING, WIRELESS, CONF]
 - name: GLOBECOM
   description: IEEE Global Communications Conference
   year: 2025
@@ -30,7 +30,7 @@
   comment: The page limit is 6 pages. Final extension is firm.
   date: TBD
   place: TBD
-  tags: [WIRELESS, CONF]
+  tags: [NETWORKING, WIRELESS, CONF]
 - name: LANMAN
   description: IEEE International Workshop on Local and Metropolitan Area Networks
   year: 2025
@@ -62,7 +62,7 @@
     - "2025-08-05 23:59"
     - "2025-08-15 23:59"
   comment: Page limits are 6 pages for regular papers and 4 pages for short papers.
-  tags: [NETWORKING, CONF]
+  tags: [WIRELESS, NETWORKING, CONF]
 - name: WCNC
   description: IEEE Wireless Communications and Networking Conference
   year: 2026
@@ -70,7 +70,7 @@
   deadline:
     - "2025-09-14 23:59"
   comment: The page limit is 6 pages.
-  tags: [WIRELESS, CONF]
+  tags: [NETWORKING, WIRELESS, CONF]
 - name: VTC
   description: IEEE Vehicular Technology Conference
   year: 2026
@@ -78,7 +78,7 @@
   deadline:
     - "2025-12-10 23:59"
   comment: The page limit is 5 pages.
-  tags: [WIRELESS, CONF]
+  tags: [NETWORKING, WIRELESS, CONF]
 - name: IEEE S&P
   description: IEEE Symposium on Security and Privacy
   year: 2026
@@ -89,7 +89,7 @@
     - "2025-11-06 23:59"
     - "2025-11-13 23:59"
   comment: Page limit is 13 pages of text, with up to 5 pages for references and appendices.
-  tags: [SECURITY, CONF, TOP4]
+  tags: [NETWORKING, WIRELESS, SYSTEMS, SECURITY, CONF, TOP4]
 - name: IEEE Euro S&P
   description: IEEE European Symposium on Security and Privacy
   year: 2026
@@ -98,7 +98,7 @@
     - "2025-11-13 23:59"
     - "2025-11-20 23:59"
   comment: Abstract due a week before the full paper deadline. Page limit is 13 pages of body text, with unlimited pages for references and appendices.
-  tags: [SECURITY, CONF]
+  tags: [NETWORKING, WIRELESS, SYSTEMS, SECURITY, CONF]
 - name: USENIX ATC
   description: USENIX Annual Technical Conference
   year: 2025
@@ -107,7 +107,7 @@
     - "2025-01-07 23:59"
     - "2025-01-14 23:59"
   comment: Abstract due a week before the full paper deadline. Page limit is 12 pages for full papers and 6 pages for short papers.
-  tags: [SYSTEMS, CONF]
+  tags: [NETWORKING,SYSTEMS, CONF]
 - name: NSDI
   description: USENIX Symposium on Networked Systems Design and Implementation
   year: 2026
@@ -129,16 +129,16 @@
     - "2026-01-29 23:59"
     - "2026-02-05 23:59"
   comment: Abstract registration required a week before the deadline. Page limit is 13 pages for the main body, with unlimited pages for bibliography and appendices.
-  tags: [SECURITY, CONF, TOP4]
+  tags: [NETWORKING, SECURITY, CONF, TOP4]
 - name: NDSS
-  description: ISOC Network and Distributed System Security Symposium
+  description: Network and Distributed System Security Symposium
   year: 2026
   link: https://www.ndss-symposium.org/ndss2026/submissions/call-for-papers/
   deadline:
     - "2025-04-23 23:59"
     - "2025-08-06 23:59"
   comment: The page limit is 13 pages, excluding ethics, references, and appendices.
-  tags: [SECURITY, CONF, TOP4]
+  tags: [NETWORKING, SYSTEMS,SECURITY, CONF, TOP4]
 - name: ACM CCS
   description: ACM Conference on Computer and Communications Security
   year: 2025
@@ -167,7 +167,7 @@
     - "2025-01-24 23:59"
     - "2025-01-31 23:59"
   comment: Abstract registration required. The page limit is 12 pages, with additional pages for references and optional appendices.
-  tags: [NETWORKING, CONF]
+  tags: [WIRELESS,NETWORKING, CONF]
 - name: CoNEXT
   description: ACM Conference on emerging Networking EXperiments and Technologies
   year: 2025
@@ -178,7 +178,7 @@
     - "2025-05-29 23:59"
     - "2025-06-05 23:59"
   comment: Paper registration is required. Long papers are 16 pages with unlimited references and 4 pages of appendices. Short papers are 10 pages with unlimited references and 2 pages of appendices.
-  tags: [NETWORKING, CONF]
+  tags: [WIRELESS, NETWORKING, CONF]
 - name: WiSec
   description: ACM Conference on Security and Privacy in Wireless and Mobile Networks
   year: 2025
@@ -198,7 +198,7 @@
     - "2026-03-11 23:59"
     - "2026-03-18 23:59"
   comment: Abstract registration is required. The page limit is 12 pages for content, with unlimited pages for references.
-  tags: [WIRELESS, CONF]
+  tags: [WIRELESS, NETWORKING, CONF]
 - name: HotNets
   description: ACM Workshop on Hot Topics in Networks
   year: 2025
@@ -226,7 +226,7 @@
     - "2025-03-30 23:59"
     - "2025-04-06 23:59"
   comment: The page limit is 10 pages, including figures, tables, and references.
-  tags: [WIRELESS, CONF]
+  tags: [NETWORKING, WIRELESS, CONF]
 - name: MobiSys
   description: ACM International Conference on Mobile Systems, Applications, and Services
   year: 2026
