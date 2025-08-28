@@ -4,7 +4,7 @@
 
 Countdown timers for academic conference deadlines targeted by the **Networks and Systems Security Lab (NSSL)**.
 
-This project is forked from the excellent [Security and Privacy deadlines](https://github.com/sec-deadlines/sec-deadlines.github.io) project and customized for our lab's research focus areas.
+This project is forked from [Security and Privacy deadlines](https://github.com/sec-deadlines/sec-deadlines.github.io) project and customized for our lab's research focus areas.
 
 ## About This Project
 
