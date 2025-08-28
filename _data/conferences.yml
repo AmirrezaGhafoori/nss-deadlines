@@ -89,7 +89,7 @@
     - "2025-11-06 23:59"
     - "2025-11-13 23:59"
   comment: Page limit is 13 pages of text, with up to 5 pages for references and appendices.
-  tags: [NETWORKING, WIRELESS, SYSTEMS, SECURITY, CONF, TOP4]
+  tags: [SECURITY, CONF, TOP4]
 - name: IEEE Euro S&P
   description: IEEE European Symposium on Security and Privacy
   year: 2026
@@ -98,7 +98,7 @@
     - "2025-11-13 23:59"
     - "2025-11-20 23:59"
   comment: Abstract due a week before the full paper deadline. Page limit is 13 pages of body text, with unlimited pages for references and appendices.
-  tags: [NETWORKING, WIRELESS, SYSTEMS, SECURITY, CONF]
+  tags: [SECURITY, CONF]
 - name: USENIX ATC
   description: USENIX Annual Technical Conference
   year: 2025
@@ -129,7 +129,7 @@
     - "2026-01-29 23:59"
     - "2026-02-05 23:59"
   comment: Abstract registration required a week before the deadline. Page limit is 13 pages for the main body, with unlimited pages for bibliography and appendices.
-  tags: [NETWORKING, SECURITY, CONF, TOP4]
+  tags: [SECURITY, CONF, TOP4]
 - name: NDSS
   description: Network and Distributed System Security Symposium
   year: 2026
@@ -138,7 +138,7 @@
     - "2025-04-23 23:59"
     - "2025-08-06 23:59"
   comment: The page limit is 13 pages, excluding ethics, references, and appendices.
-  tags: [NETWORKING, SYSTEMS,SECURITY, CONF, TOP4]
+  tags: [SECURITY, CONF, TOP4]
 - name: ACM CCS
   description: ACM Conference on Computer and Communications Security
   year: 2025
@@ -167,7 +167,7 @@
     - "2025-01-24 23:59"
     - "2025-01-31 23:59"
   comment: Abstract registration required. The page limit is 12 pages, with additional pages for references and optional appendices.
-  tags: [WIRELESS,NETWORKING, CONF]
+  tags: [WIRELESS,NETWORKING, SECURITY,CONF]
 - name: CoNEXT
   description: ACM Conference on emerging Networking EXperiments and Technologies
   year: 2025
@@ -236,4 +236,15 @@
     - "2025-12-05 23:59"
   comment: Abstract registration is required. The page limit is 12 pages for main content, with unlimited pages for appendices and references.
   tags: [SYSTEMS, WIRELESS, CONF]
+- name: RAID
+  description: International Symposium on Research in Attacks, Intrusions and Defenses
+  year: 2025
+  link: https://raid2025.github.io/call.html
+  deadline:
+    - "2025-04-24 23:59"
+  timezone: Etc/GMT+12
+  comment: The page limit is 12 pages, excluding bibliography, appendices, and supplementary material. IEEE 8.5″ x 11″ two-column format required.
+  date: October 19-22
+  place: TBD
+  tags: [SECURITY, CONF]
 
