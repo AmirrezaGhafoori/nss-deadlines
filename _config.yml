@@ -1,14 +1,14 @@
-title: Security and Privacy Conference Deadlines
-description: Countdowns to top Security and Privacy conference deadlines.
-author: Bogdan Kulynych
+title: Networking, Systems & Security Conference Deadlines
+description: Countdowns to top Networking, Wireless, Systems, and Security conference deadlines.
+author: Amirreza Ghafoori
 
-domain: "sec-deadlines.github.io"
-baseurl: ""
+domain: "amirrezaghafoori.github.io"
+baseurl: "/nss-deadlines"
 
-twitter_username: hiddenmarkov
-github_username: sec-deadlines
-github_repo: sec-deadlines
-ga_id: UA-104921371-1
+twitter_username: 
+github_username: amirrezaghafoori
+github_repo: nss-deadlines
+ga_id: # Add your Google Analytics ID here if needed
 
 markdown: kramdown
 

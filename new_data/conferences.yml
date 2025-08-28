@@ -1,62 +1,47 @@
 - name: INFOCOM
   description: IEEE International Conference on Computer Communications
   year: 2026
-  link: https://infocom2026.ieee-infocom.org/call-papers 
   deadline:
     - "2025-07-24 23:59"
     - "2025-07-31 23:59"
   comment: Abstract due a week before the full paper deadline. Page limit is 9 pages for main text, with 10 total pages including references and appendices.
-  date: TBD
-  place: TBD
   tags: [NETWORKING, CONF]
 - name: ICC
   description: IEEE International Conference on Communications
   year: 2026
-  link: https://icc2026.ieee-icc.org/authors/call-symposia-papers
   deadline:
     - "2025-09-29 23:59"
   comment: The page limit is 6 pages.
-  date: TBD
-  place: TBD
   tags: [WIRELESS, CONF]
 - name: GLOBECOM
   description: IEEE Global Communications Conference
   year: 2025
-  link: https://globecom2025.ieee-globecom.org/call-symposium-papers
   deadline:
     - "2025-04-01 23:59"
     - "2025-04-15 23:59"
     - "2025-05-02 23:59"
   comment: The page limit is 6 pages. Final extension is firm.
-  date: TBD
-  place: TBD
   tags: [WIRELESS, CONF]
 - name: LANMAN
   description: IEEE International Workshop on Local and Metropolitan Area Networks
   year: 2025
-  link: https://lanman2025.ieee-lanman.org/call-papers
   deadline:
     - "2025-04-04 23:59"
     - "2025-04-12 23:59"
   comment: The page limit is 6 pages.
   date: July 7-8
-  place: TBD
   tags: [NETWORKING, CONF]
 - name: ICNP
   description: IEEE International Conference on Network Protocols
   year: 2025
-  link: https://ieeeicnp2025.pages.dev/
   deadline:
     - "2025-05-09 23:59"
     - "2025-05-16 23:59"
   comment: Abstract due a week before the full paper deadline. Page limit is 10 pages for main text, with unlimited pages for references and appendices.
-  date: TBD
-  place: TBD
   tags: [NETWORKING, CONF]
 - name: ANTS
   description: IEEE International Conference on Advanced Networks and Telecommunications Systems
   year: 2025
-  link: https://ants2025.ieee-ants.org/
   deadline:
     - "2025-07-15 23:59"
     - "2025-08-05 23:59"
@@ -66,7 +51,6 @@
 - name: WCNC
   description: IEEE Wireless Communications and Networking Conference
   year: 2026
-  link: https://wcnc2026.ieee-wcnc.org/call-papers
   deadline:
     - "2025-09-14 23:59"
   comment: The page limit is 6 pages.
@@ -74,26 +58,21 @@
 - name: VTC
   description: IEEE Vehicular Technology Conference
   year: 2026
-  link: https://events.vtsociety.org/vtc2026-spring/
   deadline:
     - "2025-12-10 23:59"
   comment: The page limit is 5 pages.
   tags: [WIRELESS, CONF]
-- name: IEEE S&P
+- name: S&P
   description: IEEE Symposium on Security and Privacy
-  year: 2026
-  link: https://sp2026.ieee-security.org/cfpapers.html
+  year: 2025
   deadline:
-    - "2025-05-29 23:59"
-    - "2025-06-05 23:59"
-    - "2025-11-06 23:59"
-    - "2025-11-13 23:59"
+    - "2024-06-06 23:59"
+    - "2024-11-14 23:59"
   comment: Page limit is 13 pages of text, with up to 5 pages for references and appendices.
   tags: [SECURITY, CONF, TOP4]
-- name: IEEE Euro S&P
+- name: Euro S&P
   description: IEEE European Symposium on Security and Privacy
   year: 2026
-  link: https://eurosp2026.ieee-security.org/
   deadline:
     - "2025-11-13 23:59"
     - "2025-11-20 23:59"
@@ -102,7 +81,6 @@
 - name: USENIX ATC
   description: USENIX Annual Technical Conference
   year: 2025
-  link: https://www.usenix.org/conference/atc25/call-for-papers
   deadline:
     - "2025-01-07 23:59"
     - "2025-01-14 23:59"
@@ -111,18 +89,16 @@
 - name: NSDI
   description: USENIX Symposium on Networked Systems Design and Implementation
   year: 2026
-  link: https://www.usenix.org/conference/nsdi26/call-for-papers
   deadline:
     - "2025-04-18 23:59"
     - "2025-04-25 23:59"
     - "2025-09-11 23:59"
     - "2025-09-18 23:59"
   comment: Abstract due a week before the full paper deadline. The page limit is 12 pages, excluding references and appendices.
-  tags: [SYSTEMS, NETWORKING, CONF]
+  tags: [SYSTEMS, NETWORKING, CONF, TOP4]
 - name: USENIX Security
   description: USENIX Security Symposium
   year: 2026
-  link: https://www.usenix.org/conference/usenixsecurity26/call-for-papers
   deadline:
     - "2025-08-19 23:59"
     - "2025-08-26 23:59"
@@ -133,16 +109,14 @@
 - name: NDSS
   description: ISOC Network and Distributed System Security Symposium
   year: 2026
-  link: https://www.ndss-symposium.org/ndss2026/submissions/call-for-papers/
   deadline:
     - "2025-04-23 23:59"
     - "2025-08-06 23:59"
   comment: The page limit is 13 pages, excluding ethics, references, and appendices.
   tags: [SECURITY, CONF, TOP4]
-- name: ACM CCS
+- name: CCS
   description: ACM Conference on Computer and Communications Security
   year: 2025
-  link: https://www.sigsac.org/ccs/CCS2025/call-for-papers/
   deadline:
     - "2025-01-02 23:59"
     - "2025-01-09 23:59"
@@ -153,7 +127,6 @@
 - name: ASIA CCS
   description: ACM Asia Conference on Computer and Communications Security
   year: 2026
-  link: https://asiaccs2026.cse.iitkgp.ac.in/call-for-papers/
   deadline:
     - "2025-08-25 23:59"
     - "2025-12-12 23:59"
@@ -162,7 +135,6 @@
 - name: SIGCOMM
   description: ACM Special Interest Group on Data Communication
   year: 2025
-  link: https://conferences.sigcomm.org/sigcomm/2025/cfp/
   deadline:
     - "2025-01-24 23:59"
     - "2025-01-31 23:59"
@@ -171,7 +143,6 @@
 - name: CoNEXT
   description: ACM Conference on emerging Networking EXperiments and Technologies
   year: 2025
-  link: https://conferences.sigcomm.org/co-next/2025/#!/cfp
   deadline:
     - "2024-11-28 23:59"
     - "2024-12-05 23:59"
@@ -182,7 +153,6 @@
 - name: WiSec
   description: ACM Conference on Security and Privacy in Wireless and Mobile Networks
   year: 2025
-  link: https://wisec2025.gmu.edu/call-for-papers/
   deadline:
     - "2024-11-21 23:59"
     - "2025-03-16 23:59"
@@ -191,7 +161,6 @@
 - name: MobiCom
   description: ACM International Conference on Mobile Computing and Networking
   year: 2026
-  link: https://www.sigmobile.org/mobicom/2026/cfp.html
   deadline:
     - "2025-08-27 23:59"
     - "2025-09-03 23:59"
@@ -202,7 +171,6 @@
 - name: HotNets
   description: ACM Workshop on Hot Topics in Networks
   year: 2025
-  link: https://conferences.sigcomm.org/hotnets/2025/
   deadline:
     - "2025-07-09 23:59"
   comment: The page limit is 6 pages, excluding references. Appendices are not allowed.
@@ -210,7 +178,6 @@
 - name: IMC
   description: ACM Internet Measurement Conference
   year: 2025
-  link: https://conferences.sigcomm.org/imc/2025/cfp/
   deadline:
     - "2024-11-14 23:59"
     - "2024-11-21 23:59"
@@ -221,7 +188,6 @@
 - name: MobiHoc
   description: ACM International Symposium on Mobile Ad Hoc Networking and Computing
   year: 2025
-  link: https://www.sigmobile.org/mobihoc/2025/cfp.html
   deadline:
     - "2025-03-30 23:59"
     - "2025-04-06 23:59"
@@ -230,7 +196,6 @@
 - name: MobiSys
   description: ACM International Conference on Mobile Systems, Applications, and Services
   year: 2026
-  link: https://www.sigmobile.org/mobisys/2026/call_for_papers/
   deadline:
     - "2025-11-28 23:59"
     - "2025-12-05 23:59"

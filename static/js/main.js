@@ -113,26 +113,59 @@ $(function() {
   store.set('{{ site.domain }}', tags);
 
   function update_conf_list() {
+    // Check if any tags are selected
+    var anyTagSelected = false;
+    for (var i = 0; i < all_tags.length; i++) {
+      if (toggle_status[all_tags[i]]) {
+        anyTagSelected = true;
+        break;
+      }
+    }
+    
+    // Separate conferences into selected and unselected
+    var selectedConfs = [];
+    var unselectedConfs = [];
+    
     confs.each(function(i, conf) {
       var conf = $(conf);
-      var show = false;
-      var set_tags = [];
-      for (var i = 0; i < all_tags.length; i++) {
-        // if tag has been selected by user, check if the conference has it
-        if(toggle_status[all_tags[i]]) {
-          set_tags.push(conf.hasClass(all_tags[i]));
+      var hasSelectedTag = false;
+      
+      if (!anyTagSelected) {
+        // If no tags are selected, show all conferences normally
+        conf.show();
+        conf.removeClass('filtered-out');
+        selectedConfs.push(conf);
+      } else {
+        // Check if conference has any of the selected tags
+        for (var j = 0; j < all_tags.length; j++) {
+          if (toggle_status[all_tags[j]] && conf.hasClass(all_tags[j])) {
+            hasSelectedTag = true;
+            break;
+          }
+        }
+        
+        if (hasSelectedTag) {
+          conf.show();
+          conf.removeClass('filtered-out');
+          selectedConfs.push(conf);
+        } else {
+          conf.show(); // Still show but mark as filtered
+          conf.addClass('filtered-out');
+          unselectedConfs.push(conf);
         }
       }
-      let empty_or_all_true = arr => arr.every(Boolean);
-      // show a conference if it has all user-selected tags
-      // if no tag is set (= array is empty), show all entries
-      show = empty_or_all_true(set_tags);
-      if (show) {
-        conf.show();
-      } else {
-        conf.hide()
-      }
     });
+    
+    // Reorder: selected conferences first, then unselected ones
+    if (anyTagSelected) {
+      $('.conf-container').empty();
+      selectedConfs.forEach(function(conf) {
+        $('.conf-container').append(conf);
+      });
+      unselectedConfs.forEach(function(conf) {
+        $('.conf-container').append(conf);
+      });
+    }
   }
   update_conf_list();
 

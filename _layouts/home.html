@@ -24,7 +24,6 @@
           <div class="col-xs-12 col-sm-8">
             <h1>
               {{ site.title }}<br>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.description }}{% if site.twitter_hashtag %} #{{ site.twitter_hashtag }}{% endif %}" data-show-count="false" style="font-size:13px;">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
               <iframe src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
             </h1>
           </div>
@@ -42,7 +41,7 @@
                   {% for type in site.data.types %}
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" id="{{ type.sub }}-checkbox" class=""> {{ type.name }}
+                      <input type="checkbox" id="{{ type.tag }}-checkbox" class=""> {{ type.name }}
                     </label>
                   </div>
                   {% endfor %}
@@ -54,23 +53,63 @@
       </div>
       <div class="conf-container">
         {% for conf in site.data.conferences %}
-        <div id="{{ conf.name | append: conf.year | slugify }}" class="conf {% for sub in conf.sub %} {{sub}} {% endfor %}">
+        {% assign num_deadlines = conf.deadline.size %}
+        {% assign conf_id = conf.name | append: conf.year | slugify %}
+        <div id="{{ conf_id }}" class="conf {% for tag in conf.tags %} {{tag}} {% endfor %}">
           <div class="row">
               <div class="col-xs-12 col-sm-6">
                 <h2><a href="{{conf.link}}">{{conf.name}} {{conf.year}}</a></h2>
                 <div class="meta">
                   {{ conf.description }}<br>
-                  {{conf.date | replace: '-', '–'}} {% if conf.place %}// <a href="http://maps.google.com/?q={{conf.place}}">{{conf.place}}</a>{% endif %}<br>
+                  {% if conf.date and conf.date != "TBD" %}{{conf.date | replace: '-', '–'}}{% endif %}
+                  {% if conf.place and conf.place != "TBD" %} // {{conf.place}}{% endif %}
+                  {% if conf.date and conf.date != "TBD" or conf.place and conf.place != "TBD" %}<br>{% endif %}
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6">
                 <span class="timer"></span>
-                <div class="deadline">
-                  <div>Deadline:
-                    <span class="deadline-time"></span>
-                    <div class="meta">
-                      {{ conf.comment }}
+                <div class="deadline-section">
+                  {% if num_deadlines == 1 %}
+                    <div class="deadline-item">
+                      <strong>Deadline:</strong> <span class="deadline-time"></span>
                     </div>
+                  {% elsif num_deadlines == 2 %}
+                    <div class="deadline-item">
+                      <strong>Cycle 1:</strong> <span class="deadline-time-0"></span>
+                    </div>
+                    <div class="deadline-item">
+                      <strong>Cycle 2:</strong> <span class="deadline-time-1"></span>
+                    </div>
+                  {% elsif num_deadlines == 4 %}
+                    <div class="deadline-cycle">
+                      <div class="cycle-header">Cycle 1</div>
+                      <div class="deadline-item">
+                        <span class="deadline-type-label">Registration:</span> <span class="deadline-time-0"></span>
+                      </div>
+                      <div class="deadline-item">
+                        <span class="deadline-type-label">Submission:</span> <span class="deadline-time-1"></span>
+                      </div>
+                    </div>
+                    <div class="deadline-cycle">
+                      <div class="cycle-header">Cycle 2</div>
+                      <div class="deadline-item">
+                        <span class="deadline-type-label">Registration:</span> <span class="deadline-time-2"></span>
+                      </div>
+                      <div class="deadline-item">
+                        <span class="deadline-type-label">Submission:</span> <span class="deadline-time-3"></span>
+                      </div>
+                    </div>
+                  {% else %}
+                    {% for i in (0..num_deadlines) %}
+                    {% if i < num_deadlines %}
+                    <div class="deadline-item">
+                      <strong>Deadline {{ i | plus: 1 }}:</strong> <span class="deadline-time-{{ i }}"></span>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                  <div class="meta">
+                    {{ conf.comment }}
                   </div>
                 </div>
               </div>
@@ -80,7 +119,7 @@
         {% endfor %}
       </div>
       <footer>
-        Maintained by @<a href="//twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>.
+        Maintained by <a href="//github.com/{{ site.github_username }}">{{ site.author }}</a>.
       </footer>
     </div>
     <script type="text/javascript" charset="utf-8">
@@ -88,11 +127,12 @@
       deadlineByConf = {};
 
       {% for conf in site.data.conferences %}
+      // {{ conf.name }} {{ conf.year }}
       {% assign conf_id = conf.name | append: conf.year | slugify %}
-      {% if conf.deadline == "TBA" %}
+      {% if conf.deadline[0] == "TBA" %}
       $('#{{ conf_id }} .timer').html("TBA");
       $('#{{ conf_id }} .deadline-time').html("TBA");
-      deadlineByConf["{{ conf_id }}"] = moment();
+      deadlineByConf["{{ conf_id }}"] = null;
 
       {% else %}
       var rawDeadlines = {{ conf.deadline | jsonify }} || [];
@@ -100,98 +140,171 @@
         rawDeadlines = [rawDeadlines];
       }
       var parsedDeadlines = [];
-      while (rawDeadlines.length > 0) {
-        var rawDeadline = rawDeadlines.pop();
-        // check if deadline is template
-        if (rawDeadline.indexOf('%m') >= 0) {
-          for (var m = 1; m <= 12; m++) {
-            rawDeadlines.push(rawDeadline.replace('%m', m < 10 ? '0' + m : m));
-          }
-        } else if (rawDeadline.indexOf('%y') >= 0) {
-          year = parseInt(moment().year());
-          rawDeadlines.push(rawDeadline.replace('%y', year));
-          rawDeadlines.push(rawDeadline.replace('%y', year + 1));
-        } else {
-          // adjust date according to deadline timezone
-          {% if conf.timezone %}
-          var deadline = moment.tz(rawDeadline, "{{ conf.timezone }}");
-          {% else %}
-          var deadline = moment(rawDeadline + "-12:00");
-          {% endif %}
-          parsedDeadlines.push(deadline);
+      
+      // Parse all deadlines
+      for (var idx = 0; idx < rawDeadlines.length; idx++) {
+        var rawDeadline = rawDeadlines[idx];
+        // deal with year template in deadline
+        var year = {{ conf.year }};
+        rawDeadline = rawDeadline.replace('%y', year).replace('%Y', year - 1);
+        // adjust date according to deadline timezone
+        {% if conf.timezone %}
+        var deadline = moment.tz(rawDeadline, "{{ conf.timezone }}");
+        {% else %}
+        var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
+        {% endif %}
+
+        // post-process date
+        if (deadline.minutes() === 0) {
+          deadline.subtract(1, 'seconds');
         }
+        if (deadline.minutes() === 59) {
+          deadline.seconds(59);
+        }
+        parsedDeadlines.push(deadline);
       }
 
-      // check which deadline is closest
-      var confDeadline = parsedDeadlines[0];
+      // Find the closest upcoming deadline for main timer
       var today = moment();
-      for (var i = 1; i < parsedDeadlines.length; i++) {
-        deadlineCandidate = parsedDeadlines[i];
-          if ((today.diff(deadlineCandidate) < 0 && today.diff(deadlineCandidate) > today.diff(confDeadline))) {
-          confDeadline = deadlineCandidate;
+      var nextDeadline = null;
+      for (var i = 0; i < parsedDeadlines.length; i++) {
+        if (today.diff(parsedDeadlines[i]) <= 0) {
+          if (nextDeadline === null || parsedDeadlines[i].isBefore(nextDeadline)) {
+            nextDeadline = parsedDeadlines[i];
+          }
+        }
+      }
+      
+      // If no upcoming deadline, use the most recent past deadline
+      if (nextDeadline === null && parsedDeadlines.length > 0) {
+        nextDeadline = parsedDeadlines[0];
+        for (var i = 1; i < parsedDeadlines.length; i++) {
+          if (parsedDeadlines[i].isAfter(nextDeadline)) {
+            nextDeadline = parsedDeadlines[i];
+          }
         }
       }
 
-      // render countdown timer
-      if (confDeadline) {
-
-        $('#{{ conf_id }} .timer').countdown(confDeadline.toDate(), function(event) {
-          var today = moment();
-          if (today.diff(confDeadline) <= 0) {
-            $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+      // Set up main countdown timer
+      if (nextDeadline) {
+        function make_update_countdown_fn(deadline) {
+          return function(event) {
+            var diff = moment() - deadline;
+            if (diff <= 0) {
+              $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+            } else {
+              $(this).html(deadline.fromNow());
+            }
           }
-        });
-
+        }
+        $('#{{ conf_id }} .timer').countdown(nextDeadline.toDate(), make_update_countdown_fn(nextDeadline));
+        
         // check if date has passed, add 'past' class to it
-        if (today.diff(confDeadline) > 0) {
+        if (moment() - nextDeadline > 0) {
           $('#{{ conf_id }}').addClass('past');
         }
-
-        $('#{{ conf_id }} .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-
-        deadlineByConf["{{ conf_id }}"] = confDeadline;
+        deadlineByConf["{{ conf_id }}"] = nextDeadline;
       }
+
+      // Set individual deadline times
+      {% assign num_deadlines = conf.deadline.size %}
+      {% if num_deadlines == 1 %}
+      $('#{{ conf_id }} .deadline-time').html(parsedDeadlines[0].local().format('D MMM YYYY, h:mm:ss a'));
+      {% else %}
+      for (var i = 0; i < parsedDeadlines.length; i++) {
+        $('#{{ conf_id }} .deadline-time-' + i).html(parsedDeadlines[i].local().format('D MMM YYYY, h:mm:ss a'));
+      }
+      {% endif %}
+
       {% endif %}
       {% endfor %}
 
-      // Reorder list
-      confs = $('.conf');
-      confs.detach().sort(function(a, b) {
-        return deadlineByConf[a.id] < deadlineByConf[b.id];
+      // Reorder list by next deadline
+      var today = moment();
+      var confs = $('.conf').detach();
+      confs.sort(function(a, b) {
+        var aDeadline = deadlineByConf[a.id];
+        var bDeadline = deadlineByConf[b.id];
+        var aDiff = today.diff(aDeadline);
+        var bDiff = today.diff(bDeadline);
+        if (aDiff < 0 && bDiff > 0) {
+          return -1;
+        }
+        if (aDiff > 0 && bDiff < 0) {
+          return 1;
+        }
+        return bDiff - aDiff;
       });
       $('.conf-container').append(confs);
 
       // Set checkboxes
       var conf_type_data = {{ site.data.types | jsonify }};
-      var all_subs = [];
+      var all_tags = [];
       var toggle_status = {};
       for (var i = 0; i < conf_type_data.length; i++) {
-        all_subs[i] = conf_type_data[i]['sub'];
-        toggle_status[all_subs[i]] = false;
+        all_tags[i] = conf_type_data[i]['tag'];
+        toggle_status[all_tags[i]] = false;
       }
-      var subs = store.get('{{ site.domain }}');
-      if (subs === undefined) {
-        subs = all_subs;
+      var tags = store.get('{{ site.domain }}');
+      if (tags === undefined) {
+        tags = [];
       }
-      for (var i = 0; i < subs.length; i++) {
-        $('#' + subs[i] + '-checkbox').prop('checked', true);
-        toggle_status[subs[i]] = true;
+      for (var i = 0; i < tags.length; i++) {
+        $('#' + tags[i] + '-checkbox').prop('checked', true);
+        toggle_status[tags[i]] = true;
       }
-      store.set('{{ site.domain }}', subs);
+      store.set('{{ site.domain }}', tags);
 
       function update_conf_list() {
-        confs.each(function(i, conf) {
-          var conf = $(conf);
-          var show = false;
-          for (var i = 0; i < all_subs.length; i++) {
-            if(conf.hasClass(all_subs[i])) {
-              show = show | toggle_status[all_subs[i]];
-            }
+        // Get fresh reference to all conferences
+        var allConfs = $('.conf');
+        
+        // Check if any tags are selected
+        var anyTagSelected = false;
+        for (var i = 0; i < all_tags.length; i++) {
+          if (toggle_status[all_tags[i]]) {
+            anyTagSelected = true;
+            break;
           }
-          if (show) {
+        }
+        
+        // Apply filtering without moving DOM elements to preserve timers
+        allConfs.each(function(i, conf) {
+          var conf = $(conf);
+          
+          if (!anyTagSelected) {
+            // If no tags are selected, show all conferences normally
             conf.show();
+            conf.removeClass('filtered-out');
+            conf.removeClass('matched-filter');
+            conf.css('order', '');
           } else {
-            conf.hide()
+            var hasSelectedTag = false;
+            
+            // Check if conference has ALL of the selected tags (AND logic)
+            hasSelectedTag = true; // Assume it matches until proven otherwise
+            for (var j = 0; j < all_tags.length; j++) {
+              if (toggle_status[all_tags[j]]) { // If this tag is selected
+                if (!conf.hasClass(all_tags[j])) { // But conference doesn't have it
+                  hasSelectedTag = false; // Conference doesn't match
+                  break;
+                }
+              }
+            }
+            
+            if (hasSelectedTag) {
+              conf.show();
+              conf.removeClass('filtered-out');
+              conf.addClass('matched-filter');
+              // Use CSS order to move matched conferences to top
+              conf.css('order', '-1');
+            } else {
+              conf.show();
+              conf.addClass('filtered-out');
+              conf.removeClass('matched-filter');
+              // Use CSS order to move non-matched conferences to bottom
+              conf.css('order', '1');
+            }
           }
         });
       }
@@ -200,20 +313,19 @@
       // Event handler on checkbox change
       $('form :checkbox').change(function(e) {
         var checked = $(this).is(':checked');
-        var sub = $(this).prop('id').slice(0, -9);
-        toggle_status[sub] = checked;
+        var tag = $(this).prop('id').slice(0, -9);
+        toggle_status[tag] = checked;
 
         if (checked == true) {
-          if (subs.indexOf(sub) < 0)
-            subs.push(sub);
+          if (tags.indexOf(tag) < 0)
+            tags.push(tag);
         }
         else {
-          var idx = subs.indexOf(sub);
+          var idx = tags.indexOf(tag);
           if (idx >= 0)
-            subs.splice(idx, 1);
+            tags.splice(idx, 1);
         }
-        store.set('{{ site.domain }}', subs);
-
+        store.set('{{ site.domain }}', tags);
         update_conf_list();
       });
     });
