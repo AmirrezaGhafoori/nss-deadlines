@@ -1,204 +1,265 @@
 - name: INFOCOM
   description: IEEE International Conference on Computer Communications
-  year: 2026
+  year: 2027
+  link: https://infocom2027.ieee-infocom.org/call-papers
   deadline:
-    - "2025-07-24 23:59"
-    - "2025-07-31 23:59"
-  comment: Abstract due a week before the full paper deadline. Page limit is 9 pages for main text, with 10 total pages including references and appendices.
+    - "2026-07-24 23:59"
+    - "2026-07-31 23:59"
+  comment: Abstract due a week before the full paper deadline. Page limit is 9 pages for main text, with 10 total pages including references and appendices. Official INFOCOM 2027 CFP not yet published; dates follow the usual annual cycle.
+  date: TBD
+  place: TBD
   tags: [NETWORKING, CONF]
 - name: ICC
   description: IEEE International Conference on Communications
-  year: 2026
+  year: 2027
+  link: https://icc2027.ieee-icc.org/authors/call-papers
   deadline:
-    - "2025-09-29 23:59"
-  comment: The page limit is 6 pages.
+    - "2026-11-08 23:59"
+  comment: The page limit is 6 pages. Official ICC 2027 CFP not yet published; deadline estimated from recent ICC submission cycles.
+  date: TBD
+  place: TBD
   tags: [WIRELESS, CONF]
 - name: GLOBECOM
   description: IEEE Global Communications Conference
-  year: 2025
+  year: 2027
+  link: https://globecom2027.ieee-globecom.org/authors/call-symposium-papers
   deadline:
-    - "2025-04-01 23:59"
-    - "2025-04-15 23:59"
-    - "2025-05-02 23:59"
-  comment: The page limit is 6 pages. Final extension is firm.
+    - "2027-04-01 23:59"
+  comment: The page limit is 6 pages. Final extension is firm. Official GLOBECOM 2027 CFP not yet published; deadline estimated from the GLOBECOM 2026 symposium schedule.
+  date: December 7-11
+  place: TBD
   tags: [WIRELESS, CONF]
 - name: LANMAN
   description: IEEE International Workshop on Local and Metropolitan Area Networks
-  year: 2025
+  year: 2027
+  link: https://lanman2027.ieee-lanman.org/authors/call-papers
   deadline:
-    - "2025-04-04 23:59"
-    - "2025-04-12 23:59"
-  comment: The page limit is 6 pages.
-  date: July 7-8
+    - "2027-03-31 23:59"
+  comment: The page limit is 6 pages. Firm deadline. Official LANMAN 2027 CFP not yet published; deadline estimated from the LANMAN 2026 schedule.
+  date: TBD
+  place: TBD
   tags: [NETWORKING, CONF]
 - name: ICNP
   description: IEEE International Conference on Network Protocols
-  year: 2025
+  year: 2027
+  link: https://icnp27.cs.ucr.edu/cfp.html
   deadline:
-    - "2025-05-09 23:59"
-    - "2025-05-16 23:59"
-  comment: Abstract due a week before the full paper deadline. Page limit is 10 pages for main text, with unlimited pages for references and appendices.
+    - "2027-05-15 23:59"
+    - "2027-05-22 23:59"
+  comment: Title/abstract registration due a week before the full paper deadline. Page limit is 10 pages for main text, with unlimited pages for references and appendices. Official ICNP 2027 CFP not yet published; dates follow the ICNP 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [NETWORKING, CONF]
 - name: ANTS
   description: IEEE International Conference on Advanced Networks and Telecommunications Systems
-  year: 2025
+  year: 2026
+  link: https://ants2026.ieee-ants.org/call-papers
   deadline:
-    - "2025-07-15 23:59"
-    - "2025-08-05 23:59"
-    - "2025-08-15 23:59"
+    - "2026-06-01 23:59"
   comment: Page limits are 6 pages for regular papers and 4 pages for short papers.
+  date: December 17-20
+  place: Roorkee, India
   tags: [NETWORKING, CONF]
 - name: WCNC
   description: IEEE Wireless Communications and Networking Conference
-  year: 2026
+  year: 2027
+  link: https://wcnc2027.ieee-wcnc.org/authors/call-technical-papers
   deadline:
-    - "2025-09-14 23:59"
+    - "2026-07-01 23:59"
   comment: The page limit is 6 pages.
+  date: April 5-8
+  place: Panama City, Panama
   tags: [WIRELESS, CONF]
 - name: VTC
   description: IEEE Vehicular Technology Conference
-  year: 2026
+  year: 2027
+  link: https://events.vtsociety.org/vtc2027-spring/call-for-papers-2/
   deadline:
-    - "2025-12-10 23:59"
-  comment: The page limit is 5 pages.
+    - "2026-09-01 23:59"
+  comment: The page limit is 5 pages. VTC2027-Spring regular paper submission deadline.
+  date: TBD
+  place: Hamburg, Germany
   tags: [WIRELESS, CONF]
 - name: S&P
   description: IEEE Symposium on Security and Privacy
-  year: 2025
+  year: 2027
+  link: https://www.ieee-security.org/TC/SP2027/cfpapers.html
   deadline:
-    - "2024-06-06 23:59"
-    - "2024-11-14 23:59"
-  comment: Page limit is 13 pages of text, with up to 5 pages for references and appendices.
+    - "2026-06-04 23:59"
+    - "2026-06-11 23:59"
+    - "2026-11-10 23:59"
+    - "2026-11-17 23:59"
+  comment: Abstract registration required a week before each paper deadline. Page limit is 13 pages of text, with up to 5 pages for references and appendices.
+  date: May 2027
+  place: TBD
   tags: [SECURITY, CONF, TOP4]
 - name: Euro S&P
   description: IEEE European Symposium on Security and Privacy
-  year: 2026
+  year: 2027
+  link: https://www.ieee-security.org/TC/EuroSP2027/cfp.html
   deadline:
-    - "2025-11-13 23:59"
-    - "2025-11-20 23:59"
-  comment: Abstract due a week before the full paper deadline. Page limit is 13 pages of body text, with unlimited pages for references and appendices.
+    - "2026-11-13 23:59"
+    - "2026-11-20 23:59"
+  comment: Abstract registration required a week before the full paper deadline. Page limit is 13 pages of body text, with unlimited pages for references and appendices. Official Euro S&P 2027 CFP not yet published; dates follow the Euro S&P 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [SECURITY, CONF]
 - name: USENIX ATC
   description: USENIX Annual Technical Conference
-  year: 2025
+  year: 2027
+  link: https://www.usenix.org/conference/atc27/call-for-papers
   deadline:
-    - "2025-01-07 23:59"
-    - "2025-01-14 23:59"
-  comment: Abstract due a week before the full paper deadline. Page limit is 12 pages for full papers and 6 pages for short papers.
+    - "2027-01-06 23:59"
+    - "2027-01-13 23:59"
+  comment: Abstract due a week before the full paper deadline. Page limit is 12 pages for full papers and 6 pages for short papers. Official USENIX ATC 2027 CFP not yet published; dates follow the USENIX ATC 2025 cycle.
+  date: TBD
+  place: TBD
   tags: [SYSTEMS, CONF]
 - name: NSDI
   description: USENIX Symposium on Networked Systems Design and Implementation
-  year: 2026
+  year: 2027
+  link: https://www.usenix.org/conference/nsdi27/call-for-papers
   deadline:
-    - "2025-04-18 23:59"
-    - "2025-04-25 23:59"
-    - "2025-09-11 23:59"
-    - "2025-09-18 23:59"
-  comment: Abstract due a week before the full paper deadline. The page limit is 12 pages, excluding references and appendices.
+    - "2026-04-16 23:59"
+    - "2026-04-23 23:59"
+    - "2026-09-10 23:59"
+    - "2026-09-17 23:59"
+  comment: Abstract due a week before the full paper deadline. The page limit is 12 pages, excluding references and appendices. Deadlines are US Eastern Time.
+  timezone: America/New_York
+  date: May 11-13
+  place: Providence, RI, USA
   tags: [SYSTEMS, NETWORKING, CONF, TOP4]
 - name: USENIX Security
   description: USENIX Security Symposium
-  year: 2026
+  year: 2027
+  link: https://www.usenix.org/conference/usenixsecurity27
   deadline:
-    - "2025-08-19 23:59"
-    - "2025-08-26 23:59"
-    - "2026-01-29 23:59"
-    - "2026-02-05 23:59"
+    - "2026-08-18 23:59"
+    - "2026-08-25 23:59"
+    - "2027-01-19 23:59"
+    - "2027-01-26 23:59"
   comment: Abstract registration required a week before the deadline. Page limit is 13 pages for the main body, with unlimited pages for bibliography and appendices.
+  date: August 11-13
+  place: Denver, CO, USA
   tags: [SECURITY, CONF, TOP4]
 - name: NDSS
   description: ISOC Network and Distributed System Security Symposium
-  year: 2026
+  year: 2027
+  link: https://www.ndss-symposium.org/ndss2027/submissions/call-for-papers/
   deadline:
-    - "2025-04-23 23:59"
-    - "2025-08-06 23:59"
-  comment: The page limit is 13 pages, excluding ethics, references, and appendices.
+    - "2026-08-19 23:59"
+  comment: The page limit is 13 pages, excluding ethics, references, and appendices. Summer 2026 cycle deadline has passed; fall cycle is the next submission window.
+  date: TBD
+  place: TBD
   tags: [SECURITY, CONF, TOP4]
 - name: CCS
   description: ACM Conference on Computer and Communications Security
-  year: 2025
+  year: 2027
+  link: https://www.sigsac.org/ccs/CCS2027/call-for/call-for-papers.html
   deadline:
-    - "2025-01-02 23:59"
-    - "2025-01-09 23:59"
-    - "2025-04-07 23:59"
-    - "2025-04-14 23:59"
-  comment: Abstract submission is mandatory a week before the paper deadline. The page limit is 12 pages, excluding bibliography, appendices, and supplementary material.
+    - "2027-01-06 23:59"
+    - "2027-01-13 23:59"
+    - "2027-04-21 23:59"
+    - "2027-04-28 23:59"
+  comment: Abstract submission is mandatory a week before the paper deadline. The page limit is 12 pages, excluding bibliography, appendices, and supplementary material. Official CCS 2027 CFP not yet published; dates follow the CCS 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [SECURITY, CONF, TOP4]
 - name: ASIA CCS
   description: ACM Asia Conference on Computer and Communications Security
-  year: 2026
+  year: 2027
+  link: https://asiaccs2027.org/call-for-papers/
   deadline:
-    - "2025-08-25 23:59"
-    - "2025-12-12 23:59"
+    - "2026-08-21 23:59"
+    - "2026-12-11 23:59"
   comment: The page limit is 12 pages, excluding bibliography and appendices.
+  date: TBD
+  place: TBD
   tags: [SECURITY, CONF]
 - name: SIGCOMM
   description: ACM Special Interest Group on Data Communication
-  year: 2025
+  year: 2027
+  link: https://conferences.sigcomm.org/sigcomm/2027/cfp/
   deadline:
-    - "2025-01-24 23:59"
-    - "2025-01-31 23:59"
-  comment: Abstract registration required. The page limit is 12 pages, with additional pages for references and optional appendices.
+    - "2027-01-29 23:59"
+    - "2027-02-05 23:59"
+  comment: Abstract registration required. The page limit is 12 pages, with additional pages for references and optional appendices. Official SIGCOMM 2027 CFP not yet published; dates follow the SIGCOMM 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [NETWORKING, CONF]
 - name: CoNEXT
   description: ACM Conference on emerging Networking EXperiments and Technologies
-  year: 2025
+  year: 2026
+  link: https://conferences.sigcomm.org/co-next/2026/#!/cfp
   deadline:
-    - "2024-11-28 23:59"
-    - "2024-12-05 23:59"
-    - "2025-05-29 23:59"
-    - "2025-06-05 23:59"
+    - "2026-05-29 23:59"
+    - "2026-06-05 23:59"
   comment: Paper registration is required. Long papers are 16 pages with unlimited references and 4 pages of appendices. Short papers are 10 pages with unlimited references and 2 pages of appendices.
+  date: December 7-10
+  place: Utrecht, Netherlands
   tags: [NETWORKING, CONF]
 - name: WiSec
   description: ACM Conference on Security and Privacy in Wireless and Mobile Networks
-  year: 2025
+  year: 2027
+  link: https://wisec27.events.cispa.de/call-for-papers/
   deadline:
-    - "2024-11-21 23:59"
-    - "2025-03-16 23:59"
-  comment: Full papers have a 10-page limit, excluding bibliography and appendices, with a total of 12 pages. Short papers have a 6-page limit.
+    - "2026-11-18 23:59"
+    - "2027-03-03 23:59"
+  comment: Full papers have a 10-page limit, excluding bibliography and appendices, with a total of 12 pages. Short papers have a 6-page limit. Official WiSec 2027 CFP not yet published; dates follow the WiSec 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [SECURITY, WIRELESS, CONF]
 - name: MobiCom
   description: ACM International Conference on Mobile Computing and Networking
-  year: 2026
+  year: 2027
+  link: https://www.sigmobile.org/mobicom/2026/cfp.html
   deadline:
-    - "2025-08-27 23:59"
-    - "2025-09-03 23:59"
-    - "2026-03-11 23:59"
-    - "2026-03-18 23:59"
-  comment: Abstract registration is required. The page limit is 12 pages for content, with unlimited pages for references.
+    - "2026-08-27 23:59"
+    - "2026-09-03 23:59"
+  comment: Abstract registration is required. The page limit is 12 pages for content, with unlimited pages for references. Summer 2026 cycle targets MobiCom 2027.
+  date: TBD
+  place: TBD
   tags: [WIRELESS, CONF]
 - name: HotNets
   description: ACM Workshop on Hot Topics in Networks
-  year: 2025
+  year: 2026
+  link: https://conferences.sigcomm.org/hotnets/2026/
   deadline:
-    - "2025-07-09 23:59"
+    - "2026-07-16 23:59"
   comment: The page limit is 6 pages, excluding references. Appendices are not allowed.
+  date: November 16-17
+  place: Salt Lake City, Utah, USA
   tags: [NETWORKING, CONF]
 - name: IMC
   description: ACM Internet Measurement Conference
-  year: 2025
+  year: 2027
+  link: https://conferences.sigcomm.org/imc/2027/cfp/
   deadline:
-    - "2024-11-14 23:59"
-    - "2024-11-21 23:59"
-    - "2025-05-08 23:59"
-    - "2025-05-15 23:59"
-  comment: Paper registration is required. Full papers have a 13-page limit, and short papers have a 6-page limit, excluding references and appendices.
+    - "2026-11-13 23:59"
+    - "2026-11-20 23:59"
+  comment: Paper registration is required. Full papers have a 13-page limit, and short papers have a 6-page limit, excluding references and appendices. Official IMC 2027 CFP not yet published; dates follow the IMC 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [NETWORKING, CONF]
 - name: MobiHoc
   description: ACM International Symposium on Mobile Ad Hoc Networking and Computing
-  year: 2025
+  year: 2027
+  link: https://www.sigmobile.org/mobihoc/2027/cfp.html
   deadline:
-    - "2025-03-30 23:59"
-    - "2025-04-06 23:59"
-  comment: The page limit is 10 pages, including figures, tables, and references.
+    - "2027-04-13 23:59"
+    - "2027-04-20 23:59"
+  comment: The page limit is 10 pages, including figures, tables, and references. Official MobiHoc 2027 CFP not yet published; dates follow the MobiHoc 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [WIRELESS, CONF]
 - name: MobiSys
   description: ACM International Conference on Mobile Systems, Applications, and Services
-  year: 2026
+  year: 2027
+  link: https://www.sigmobile.org/mobisys/2027/call_for_papers/
   deadline:
-    - "2025-11-28 23:59"
-    - "2025-12-05 23:59"
-  comment: Abstract registration is required. The page limit is 12 pages for main content, with unlimited pages for appendices and references.
+    - "2026-11-28 23:59"
+    - "2026-12-05 23:59"
+  comment: Abstract registration is required. The page limit is 12 pages for main content, with unlimited pages for appendices and references. Official MobiSys 2027 CFP not yet published; dates follow the MobiSys 2026 cycle.
+  date: TBD
+  place: TBD
   tags: [SYSTEMS, WIRELESS, CONF]
-

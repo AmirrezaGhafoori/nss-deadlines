@@ -5,10 +5,9 @@ author: Amirreza Ghafoori
 domain: "amirrezaghafoori.github.io"
 baseurl: "/nss-deadlines"
 
-twitter_username: 
+twitter_username:
 github_username: amirrezaghafoori
 github_repo: nss-deadlines
-ga_id: # Add your Google Analytics ID here if needed
+ga_id:
 
 markdown: kramdown
-
