@@ -69,7 +69,13 @@
               <div class="col-xs-12 col-sm-6">
                 <span class="timer"></span>
                 <div class="deadline-section">
-                  {% if num_deadlines == 1 %}
+                  {% if conf.labels and num_deadlines > 1 %}
+                    {% for label in conf.labels %}
+                    <div class="deadline-item">
+                      <strong>{{ label }}:</strong> <span class="deadline-time-{{ forloop.index0 }}"></span>
+                    </div>
+                    {% endfor %}
+                  {% elsif num_deadlines == 1 %}
                     <div class="deadline-item">
                       <strong>Deadline:</strong> <span class="deadline-time"></span>
                     </div>

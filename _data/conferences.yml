@@ -2,6 +2,7 @@
   description: IEEE International Conference on Computer Communications
   year: 2028
   link: https://infocom2027.ieee-infocom.org/
+  labels: [Abstract, Paper]
   deadline:
     - "2027-07-24 23:59"
     - "2027-07-31 23:59"
@@ -29,6 +30,16 @@
   date: December 6-10
   place: Abu Dhabi, United Arab Emirates
   tags: [WIRELESS, CONF]
+- name: VCC
+  description: IEEE Virtual Conference on Communications
+  year: 2027
+  link: https://vcc2027.ieee-vcc.org/
+  deadline:
+    - "2026-11-27 23:59"
+  comment: Fully virtual IEEE ComSoc conference (pre-recorded talks with live Q&A). Technical papers are at most 6 pages in IEEE double-column format, submitted via EDAS. Deadline extended from November 6.
+  date: March 2-4
+  place: Virtual
+  tags: [WIRELESS, NETWORKING, CONF]
 - name: LANMAN
   description: IEEE International Workshop on Local and Metropolitan Area Networks
   year: 2027
@@ -43,6 +54,7 @@
   description: IEEE International Conference on Network Protocols
   year: 2027
   link: https://icnp26.cs.ucr.edu/cfp.html
+  labels: [Abstract, Paper]
   deadline:
     - "2027-05-15 23:59"
     - "2027-05-22 23:59"
@@ -97,6 +109,7 @@
   description: IEEE European Symposium on Security and Privacy
   year: 2027
   link: https://eurosp2027.ieee-security.org/cfp.html
+  labels: [Abstract, Paper]
   deadline:
     - "2026-11-25 23:59"
     - "2026-12-02 23:59"
@@ -104,6 +117,18 @@
   date: July 5-9
   place: Madrid, Spain
   tags: [SECURITY, CONF]
+- name: DSN
+  description: IEEE/IFIP International Conference on Dependable Systems and Networks
+  year: 2027
+  link: https://dsn2027-berlin.github.io/call-for-contributions/
+  labels: [Abstract, Paper]
+  deadline:
+    - "2026-11-25 23:59"
+    - "2026-12-02 23:59"
+  comment: Research track. Abstract submission is due a week before the paper deadline. Regular papers are 11 pages; practical experience reports and tool papers are 7 pages.
+  date: June 22-25
+  place: Berlin, Germany
+  tags: [SECURITY, SYSTEMS, CONF]
 - name: ATC
   description: ACM SIGOPS Annual Technical Conference (formerly USENIX ATC)
   year: 2027
@@ -250,6 +275,7 @@
   description: ACM International Symposium on Mobile Ad Hoc Networking and Computing
   year: 2027
   link: https://www.sigmobile.org/mobihoc/2026/cfp.html
+  labels: [Abstract, Paper]
   deadline:
     - "2027-04-13 23:59"
     - "2027-04-20 23:59"
@@ -261,6 +287,7 @@
   description: ACM International Conference on Mobile Systems, Applications, and Services
   year: 2027
   link: https://www.sigmobile.org/mobisys/2027/call_for_papers/
+  labels: [Abstract, Paper]
   deadline:
     - "2026-11-27 23:59"
     - "2026-12-04 23:59"
